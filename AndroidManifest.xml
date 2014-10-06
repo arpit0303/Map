@@ -26,7 +26,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@android:style/Theme.Holo.Light" >
         <activity
             android:name="in.jaaga.maps.MainActivity"
             android:label="@string/app_name" >
@@ -43,6 +43,15 @@
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyAOWjQRgI1IDBqhKo4-Ww28RdpWNp_DFK4" />
+
+        <activity
+            android:name="in.jaaga.maps.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="in.jaaga.maps.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.jaaga.maps.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
