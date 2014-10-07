@@ -12,15 +12,12 @@ import android.widget.PopupMenu.OnMenuItemClickListener;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MainActivity extends Activity {
 
 	GoogleMap maps;
-	LatLng NEWARK = new LatLng(40.714086, -74.228697);
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -100,6 +97,6 @@ public class MainActivity extends Activity {
 				.position(new LatLng(Common.LAT, Common.LAG))
 				.title(Common.MARKER_TITLE).visible(Common.MARKER)
 				.draggable(true));
-
+		
 	}
 }
