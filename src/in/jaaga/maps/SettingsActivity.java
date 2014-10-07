@@ -1,7 +1,5 @@
 package in.jaaga.maps;
 
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;

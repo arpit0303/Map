@@ -1,13 +1,6 @@
 package in.jaaga.maps;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
-
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -17,9 +10,17 @@ import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.PopupMenu.OnMenuItemClickListener;
 
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.GroundOverlayOptions;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
 public class MainActivity extends Activity {
 
 	GoogleMap maps;
+	LatLng NEWARK = new LatLng(40.714086, -74.228697);
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -92,14 +93,13 @@ public class MainActivity extends Activity {
 		maps.setMyLocationEnabled(Common.LOCATION);
 		maps.setTrafficEnabled(Common.TRAFFIC);
 		maps.setBuildingsEnabled(Common.BUILDINGS);
+		maps.setIndoorEnabled(Common.BUILDINGS);
+		// maps.getUiSettings().setCompassEnabled(true);
 
-		
 		maps.addMarker(new MarkerOptions()
 				.position(new LatLng(Common.LAT, Common.LAG))
-				.title(Common.MARKER_TITLE)
-				.visible(Common.MARKER)
+				.title(Common.MARKER_TITLE).visible(Common.MARKER)
 				.draggable(true));
 
 	}
-
 }
